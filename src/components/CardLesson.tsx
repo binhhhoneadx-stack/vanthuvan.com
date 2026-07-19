@@ -64,6 +64,7 @@ const CardLesson = () => {
 
             <Link
               to={menu_tile[keyName].path}
+              target="_blank"
               className="inline-flex items-center border border-[#7c5fd4] py-1.5 rounded-full px-6 group hover:bg-[#7c5fd4] bg-transparent transition duration-300 mt-8"
             >
               <MdOutlineMenuBook size={18} className="text-[#7c5fd4] group-hover:text-white" />
