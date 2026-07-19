@@ -2,7 +2,6 @@ import bg from "../assets/images/background_3.png";
 import { FaStar } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import { MdOutlineMenuBook } from "react-icons/md";
-import lesson from "../assets/images/lesson_1.png";
 import { motion } from "framer-motion";
 import { PiTargetBold } from "react-icons/pi";
 import { GiTrophyCup } from "react-icons/gi";
@@ -81,7 +80,7 @@ const CardLesson = () => {
             transition={{ duration: 0.8 }}
             className="p-2 rounded-xl bg-white drop-shadow-xl drop-shadow-[#7c5fd4]"
           >
-            <img src={lesson} alt="" className="w-105 h-55 object-center rounded-md" />
+            <img src={menu_tile[keyName].imageUrl} alt="" className="w-105 h-55 object-center rounded-md" />
           </motion.div>
         </div>
       </div>

@@ -2,8 +2,13 @@ import bg from "../assets/images/background_2.png";
 import { motion } from "framer-motion";
 import personal from "../assets/images/muc_tieu_ca_nhan.png";
 import dinh_huong from "../assets/images/dinh_huong_ca_nhan.png";
+import { useEffect } from "react";
 
 const PersonalDevelopment = () => {
+  useEffect(() => {
+    document.title = `Vũ Thu Vân - Mục tiêu và định hướng cá nhân`;
+  }, []);
+
   return (
     <div>
       <div

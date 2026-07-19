@@ -1,8 +1,13 @@
 import bg from "../assets/images/background_2.png";
 import { motion } from "framer-motion";
 import profileo_goals from "../assets/images/muc_tieu_profile.png";
+import { useEffect } from "react";
 
 const PortfolioGoals = () => {
+  useEffect(() => {
+    document.title = `Vũ Thu Vân - Mục tiêu xây dựng profilio`;
+  }, []);
+
   return (
     <div
       className="w-full h-[95vh] relative flex items-center justify-center"

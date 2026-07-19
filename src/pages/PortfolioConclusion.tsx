@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
 import tong_ket from "../assets/images/tong_ket.png";
+import { useEffect } from "react";
 
 const PortfolioConclusion = () => {
+  useEffect(() => {
+    document.title = `Vũ Thu Vân - Tổng Kết`;
+  }, []);
+
   return (
     <div className="w-full min-h-[77vh] relative flex items-center justify-center py-18">
       <div

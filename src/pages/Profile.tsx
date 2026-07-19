@@ -1,8 +1,14 @@
 import bg from "../assets/images/background_2.png";
 import avatar from "../assets/images/avatar.jpg";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const Profile = () => {
+
+  useEffect(() => {
+    document.title = `Vũ Thu Vân - Giới thiệu bản thân`;
+  }, []);
+
   return (
     <div
       className="w-full h-[77vh] relative flex items-center justify-center"
