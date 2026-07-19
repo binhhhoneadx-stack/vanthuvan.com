@@ -24,32 +24,43 @@ const menu_features = [
 
 const Features = () => {
   return (
-    <section className="flex items-center justify-center py-15">
-      <div className="w-[82%] flex items-center justify-center flex-col ">
-        <motion.div initial={{ opacity: 0, y: 150 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <h1 className="text-3xl font-bold">
+    <section className="flex items-center justify-center py-10 md:py-15 px-4">
+      <div className="w-full max-w-6xl flex items-center justify-center flex-col">
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center"
+        >
+          <h1 className="text-2xl md:text-3xl font-bold px-2">
             Thu trọn lăng kính <span className="text-[#7c5fd4]">nghệ thuật</span>, kiến tạo không gian{" "}
             <span className="text-[#7c5fd4]">kỹ thuật số</span>
           </h1>
-
-          <div className="w-55 h-0.5 rounded-full bg-[#7c5fd4] m-auto mt-5" />
+          <div className="w-24 md:w-55 h-0.5 rounded-full bg-[#7c5fd4] mx-auto mt-5" />
         </motion.div>
 
+        {/* Features Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 150 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="flex items-center mt-10 gap-8"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 w-full"
         >
           {menu_features.map((item) => (
-            <div key={item.id} className="flex items-center w-85 gap-5">
-              <div className="bg-[#ede9fa] p-3 rounded-full">
-                <item.IconBar className="text-[#7c5fd4]" size={30} />
+            <div
+              key={item.id}
+              className="flex items-start gap-4 p-4 hover:bg-gray-50 rounded-xl transition duration-300"
+            >
+              <div className="bg-[#ede9fa] p-3 rounded-full flex-shrink-0">
+                <item.IconBar className="text-[#7c5fd4]" size={28} />
               </div>
 
               <div>
                 <h3 className="text-lg font-semibold">{item.title}</h3>
-                <p className="text-black/45">{item.desc}</p>
+                <p className="text-black/50 text-sm md:text-base mt-1">{item.desc}</p>
               </div>
             </div>
           ))}
